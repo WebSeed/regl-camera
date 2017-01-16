@@ -1,4 +1,3 @@
-var mouseChange = require('mouse-change')
 var mouseWheel = require('mouse-wheel')
 var identity = require('gl-mat4/identity')
 var perspective = require('gl-mat4/perspective')
