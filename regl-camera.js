@@ -47,10 +47,7 @@ function createCamera (regl, props_) {
     var noScroll = true
     var isDown = false
     touch
-      .on('down', function (e) { isDown = true })
-      .on('up', function (e) { isDown = false })
-      .on('cancel', function (e) { isDown = false })
-      .on('move', function (e) {
+      .on('moveDown', function (e) {
         if (isDown) {
           var dx = (e.x - prevX) / width
           var dy = (e.y - prevY) / height
