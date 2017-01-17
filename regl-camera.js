@@ -42,19 +42,19 @@ function createCamera (regl, props_) {
   if (props.mouse !== false) {
     var source = element || window
     touch = createTouch(element || document.body)
-    var width = element ? element.offsetWidth : window.innerWidth
-    var height = element ? element.offsetHeight : window.innerHeight
+    function getWidth() { return element ? element.offsetWidth : window.innerWidth }
+    function getHeight() { return element ? element.offsetHeight : window.innerHeight }
     var noScroll = true
     touch
       .on('drag', function (e) {
-        var dx = (e.dx) / width
-        var dy = (e.dy) / height
+        var dx = (e.dx) / getWidth()
+        var dy = (e.dy) / getHeight()
         var w = Math.max(cameraState.distance, 0.5)
         cameraState.dtheta += w * dx
         cameraState.dphi += w * dy
       })
     mouseWheel(source, function (dx, dy) {
-      ddistance += dy / height
+      ddistance += dy / getHeight()
     }, noScroll)
   }
 
