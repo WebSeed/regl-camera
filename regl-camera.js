@@ -46,7 +46,7 @@ function createCamera (regl, props_) {
     var height = element ? element.offsetHeight : window.innerHeight
     var noScroll = true
     touch
-      .on('downMove', function (e) {
+      .on('drag', function (e) {
         var dx = (e.dx) / width
         var dy = (e.dy) / height
         var w = Math.max(cameraState.distance, 0.5)
