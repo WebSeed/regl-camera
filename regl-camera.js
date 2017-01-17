@@ -45,18 +45,13 @@ function createCamera (regl, props_) {
     var width = element ? element.offsetWidth : window.innerWidth
     var height = element ? element.offsetHeight : window.innerHeight
     var noScroll = true
-    var isDown = false
     touch
-      .on('moveDown', function (e) {
-        if (isDown) {
-          var dx = (e.x - prevX) / width
-          var dy = (e.y - prevY) / height
-          var w = Math.max(cameraState.distance, 0.5)
-          cameraState.dtheta += w * dx
-          cameraState.dphi += w * dy
-        }
-        prevX = e.x
-        prevY = e.y
+      .on('downMove', function (e) {
+        var dx = (e.dx) / width
+        var dy = (e.dy) / height
+        var w = Math.max(cameraState.distance, 0.5)
+        cameraState.dtheta += w * dx
+        cameraState.dphi += w * dy
       })
     mouseWheel(source, function (dx, dy) {
       ddistance += dy / height
