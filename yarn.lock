@@ -975,9 +975,9 @@ tiny-emitter@^1.1.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/tiny-emitter/-/tiny-emitter-1.1.0.tgz#ab405a21ffed814a76c19739648093d70654fecb"
 
-tinytouch@v1.3.0:
-  version "1.3.0"
-  resolved "https://registry.yarnpkg.com/tinytouch/-/tinytouch-1.3.0.tgz#7c03a06dd2ffdd4610045e61cc66368c7671e734"
+tinytouch@^1.4.0:
+  version "1.4.0"
+  resolved "https://registry.yarnpkg.com/tinytouch/-/tinytouch-1.4.0.tgz#11796d31e14214d4c482369b9c5a586113f5be50"
   dependencies:
     tiny-emitter "^1.1.0"
 
